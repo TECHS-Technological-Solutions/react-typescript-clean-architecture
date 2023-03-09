@@ -13,7 +13,7 @@ requests.
 
 ## Todo list
 
-- [] add docs
-- [] add contexts
-- [] add recoil
-- [] add react-router
+- [ ] add docs
+- [ ] add contexts
+- [ ] add recoil
+- [ ] add react-router
