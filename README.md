@@ -5,6 +5,14 @@
 this repo helps you if you are looking for best practices in react.js app
 development
 
+## Naming Conventions
+
+- files: kebab-case
+- folders: kebab-case
+- literal constants: UPPER_CASE
+- variables: camelCase
+- components: PascalCase
+
 ## Contribution
 
 There are a lot of things we can address in a clean code base, feel free to open
