@@ -1,4 +1,4 @@
-import {ReactNode} from 'react'
+import type {ReactNode} from 'react'
 
 interface ButtonProps {
   children: ReactNode
@@ -6,7 +6,7 @@ interface ButtonProps {
   onClick: React.MouseEventHandler
 }
 
-function Button(props: ButtonProps) {
+export function Button(props: ButtonProps) {
   const {submit = false, children, onClick} = props
   return (
     <button type={submit ? 'submit' : 'button'} onClick={onClick}>
@@ -14,4 +14,3 @@ function Button(props: ButtonProps) {
     </button>
   )
 }
-export default Button

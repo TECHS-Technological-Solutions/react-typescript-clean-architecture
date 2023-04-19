@@ -1,6 +1,6 @@
 import axios from 'axios'
-import {httpStatus} from '../utils/constants'
-import {getAccessToken} from '../utils/providers/auth-provider'
+import {getAccessToken} from '@/utils/providers/auth-provider'
+import {httpStatus} from '@/utils/constants'
 
 const BASE_URL = 'https://example.com/api/v1/'
 

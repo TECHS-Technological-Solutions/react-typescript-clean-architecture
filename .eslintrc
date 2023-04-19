@@ -16,20 +16,17 @@
     "plugin:react-hooks/recommended",
     "prettier"
   ],
-  "plugins": ["react", "@typescript-eslint", "import", "prettier"],
+  "plugins": ["react", "@typescript-eslint", "import"],
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
     },
+
     "import/resolver": {
-      "node": {
-        "paths": ["src"],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
+      "typescript": {}
     }
   },
   "rules": {
-    "prettier/prettier": "error",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
@@ -42,16 +39,32 @@
     ],
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": "off",
+    "sort-imports": [
+      "error",
+      {
+        "ignoreDeclarationSort": true
+      }
+    ],
     "import/order": [
       "error",
       {
+        "warnOnUnassignedImports": true,
         "groups": [
           "builtin",
           "external",
           "internal",
           "parent",
           "sibling",
-          "index"
+          "index",
+          "object",
+          "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@/**/**",
+            "group": "parent",
+            "position": "before"
+          }
         ]
       }
     ],
@@ -70,6 +83,8 @@
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/array-type": ["error", {"default": "array-simple"}],
+    "@typescript-eslint/consistent-type-imports": ["error"],
     "consistent-return": "off",
     "no-use-before-define": "off",
     "no-shadow": "off",
@@ -78,6 +93,12 @@
       {
         "boolean": true,
         "number": true
+      }
+    ],
+    "no-console": [
+      "warn",
+      {
+        "allow": ["warn", "info", "error"]
       }
     ]
   },
