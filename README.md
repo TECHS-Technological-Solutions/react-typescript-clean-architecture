@@ -11,7 +11,6 @@ development
 - folders: kebab-case
 - literal constants: UPPER_CASE
 - variables: camelCase
-- components: PascalCase
 
 ## Contribution
 
@@ -21,7 +20,4 @@ requests.
 
 ## Todo list
 
-- [ ] add docs
-- [ ] add contexts
-- [ ] add recoil
 - [ ] add react-router
